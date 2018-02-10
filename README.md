@@ -1,7 +1,7 @@
 # Slacky-Bookmarks
 > Love a page and want to store it in "Slack" for future reference ?
 Press `Cmd + B`
-<img src="https://github.com/akki777/Slacky-Bookmarks/blob/master/screenshot_slack.png" alt="Slack Screenshot" height="200" width="350" style="border: 1px solid grey"/>
+<img src="https://github.com/akki777/Slacky-Bookmarks/blob/master/screenshot_slack.png" alt="Slack Screenshot" height="300" width="500"/>
 
 ## How to make it work ?
 - ### Set up Slack Bot
