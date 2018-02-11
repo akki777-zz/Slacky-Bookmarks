@@ -7,9 +7,9 @@ Press `Cmd + B` / `Ctrl + B`
 ## How to make it work ?
 - ### Set up Slack Bot
   - Let's say your workspace name is "myspace"
-  - Head to [Slack apps]("https://myspace.slack.com/apps")
+  - Head to Slack apps > https://myspace.slack.com/apps
   - Search for `Bots`
-  - Click `Add Configuration` and give it a username.
+  - Click `Add Configuration` and give it a username (say _bookmarks-bot_), purpose, etc.
   - A Bot token starting with `xoxb-` will be generated.
 
 - ### Run Chrome Extension
