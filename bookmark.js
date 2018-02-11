@@ -1,5 +1,5 @@
 /* Create Context Menu and Handle click */
-chrome.contextMenus.create({type: "normal", id: "101", title: "Slack-this", onclick: function(info) {
+chrome.contextMenus.create({type: "normal", id: "101", title: "Slack this", onclick: function(info) {
     sendToSlack(info.pageUrl);
 }})
 

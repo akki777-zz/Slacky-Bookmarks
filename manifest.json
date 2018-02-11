@@ -9,7 +9,7 @@
   ],
   "background" : {
     "persistent" : true,
-    "scripts" : ["bookmark.js"]
+    "scripts" : ["config.js","bookmark.js"]
   },
   "commands": {
 		"bookmark_page": {
