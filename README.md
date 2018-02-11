@@ -27,3 +27,7 @@ Press `Cmd + B`
 - A _notification_ comes from __bookmarks-bot__ (if you named it so :grimacing:)
 - All your bookmarks are saved in __bookmarks-bot__ chat window.
  
+## Licence
+Licensed under the MIT license.
+
+Copyright (c) 2015 [@akki777](http://github.com/akki777).
