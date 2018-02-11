@@ -24,6 +24,6 @@ Press `Cmd + B`
 ## How to use
 - Press `Cmd + B`
 - Or Right-click mouse and select `Slack-this`
-- A notification comes from __bookmarks-bot__ (if you named it so :grimacing:)
+- A _notification_ comes from __bookmarks-bot__ (if you named it so :grimacing:)
 - All your bookmarks are saved in __bookmarks-bot__ chat window.
  
