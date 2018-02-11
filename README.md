@@ -1,7 +1,8 @@
 # Slacky-Bookmarks
 > Love a page and want to store it in "Slack" for future reference ?
 Press `Cmd + B`
-<img src="https://github.com/akki777/Slacky-Bookmarks/blob/master/screenshot_slack.png" alt="Slack Screenshot" height="300" width="500"/>
+
+<kbd><img src="https://github.com/akki777/Slacky-Bookmarks/blob/master/screenshot_slack.png" alt="Slack Screenshot" height="300" width="500"/></kbd>
 
 ## How to make it work ?
 - ### Set up Slack Bot
@@ -23,5 +24,6 @@ Press `Cmd + B`
 ## How to use
 - Press `Cmd + B`
 - Or Right-click mouse and select `Slack-this`
-- All your bookmarks are in  __bookmarks-bot__ (if you named it so :grimacing:)
+- A notification comes from __bookmarks-bot__ (if you named it so :grimacing:)
+- All your bookmarks are saved in __bookmarks-bot__ chat window.
  
