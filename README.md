@@ -13,10 +13,10 @@ Press `Cmd + B` / `Ctrl + B`
   - A Bot token starting with `xoxb-` will be generated.
 
 - ### Run Chrome Extension
-  - Clone this Repo (this extensions is not on Chrome Store).
+  - Clone this Repo (this extension is not in Chrome Store).
   - __Change the Token and channel name__ in `config.js` accordingly.
   - Visit [Chrome extensions](https://chrome://extensions) on Chrome browser.
-  - Ensure that the Developer mode checkbox in the top right-hand corner is checked.
+  - Ensure that the Developer mode is turned on.
   - Click Load unpacked extension.
   - Select the directory.
   - :tada: We are done
