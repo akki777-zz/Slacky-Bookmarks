@@ -63,7 +63,11 @@ function sendToSlack(pageUrl) {
         })
         .then((response) => response.json())
         .then((data) => {
-            console.log("Article sent to Slack");
+            if(data.ok) {
+                console.log("Article sent to Slack");
+            } else {
+                console.log(data.error);
+            }
         })
         .catch((error) => {
             console.log("Error: " + this.status);
