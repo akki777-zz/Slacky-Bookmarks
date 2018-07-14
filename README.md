@@ -6,17 +6,17 @@ Press `Cmd + B` / `Ctrl + B`
 
 ## How to make it work ?
 - ### Set up Slack Bot
- - Let's say your workspace name is "myspace"
- - Head to [Slack apps]("https://myspace.slack.com/apps")
- - Search for `Bots`
- - Click `Add Configuration` and give it a username.
- - A Bot token starting with `xoxb-` will be generated.
+  - Let's say your workspace name is "myspace"
+  - Head to Slack apps > https://myspace.slack.com/apps
+  - Search for `Bots`
+  - Click `Add Configuration` and give it a username (say _bookmarks-bot_), purpose, etc.
+  - A Bot token starting with `xoxb-` will be generated.
 
 - ### Run Chrome Extension
-  - Clone this Repo (this extensions is not on Chrome Store).
+  - Clone this Repo (this extension is not in Chrome Store).
   - __Change the Token and channel name__ in `config.js` accordingly.
   - Visit [Chrome extensions](https://chrome://extensions) on Chrome browser.
-  - Ensure that the Developer mode checkbox in the top right-hand corner is checked.
+  - Ensure that the Developer mode is turned on.
   - Click Load unpacked extension.
   - Select the directory.
   - :tada: We are done
