@@ -1,33 +1,71 @@
+'use strict';
+
 /* Create Context Menu and Handle click */
-chrome.contextMenus.create({type: "normal", id: "101", title: "Slack this", onclick: function(info) {
-    sendToSlack(info.pageUrl);
-}})
+chrome.contextMenus.create({
+    type: "normal",
+    id: "101",
+    title: "Slack this",
+    onclick: (info) => {
+        sendToSlack(info.pageUrl);
+    }
+})
 
 /* Handle Keyboard Shortcut */
-chrome.commands.onCommand.addListener(function (command) {
-  chrome.tabs.getSelected(null,function(tab) {
-      sendToSlack(tab.url);
-  });
+chrome.commands.onCommand.addListener((command) => {
+    chrome.tabs.getSelected(null, function (tab) {
+        sendToSlack(tab.url);
+    });
 });
 
 /**
- * <p>Sends the page url to Slack. </p>
- * @param pageUrl The url of current page to be sent to Slack as bookmark.
-**/
+ * Converts the Request to Query Params String.
+ * @param {Object} params
+ * @return {String}
+ */
+function convertToQueryParams(params) {
+    let esc = encodeURIComponent;
+    let query = Object.keys(params)
+        .map(k => esc(k) + '=' + esc(params[k]))
+        .join('&');
+    return query;
+}
+
+/**
+ * Sends the page url to Slack.
+ * @param {String} pageUrl The url of current page to be sent to Slack as bookmark.
+ **/
 function sendToSlack(pageUrl) {
-  var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          var response = JSON.parse(this.response);
-          if (response.ok == true) {
-              console.log("Article sent to Slack");
-          } else {
-              console.log("Slack Error: " + response.error);
-          }
-       } else {
-           console.log("Error: " + this.status);
-       }
+
+    const request = {
+        token: token,
+        channel: channel,
+        unfurl_links: true,
+        pretty: 1,
+        as_user: true,
+        text: pageUrl
     };
-  xhttp.open("POST", slackUrl + "&text=<" + pageUrl + ">", true);
-  xhttp.send();
+
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+        },
+        body: convertToQueryParams(request)
+    };
+
+    fetch(slackUrl, options)
+        .then((response) => {
+            if (response.ok) {
+                return Promise.resolve(response);
+            } else {
+                return Promise.reject(new Error(response.statusText));
+            }
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log("Article sent to Slack");
+        })
+        .catch((error) => {
+            console.log("Error: " + this.status);
+        });
 }
